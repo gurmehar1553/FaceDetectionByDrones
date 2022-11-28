@@ -1,0 +1,39 @@
+
+#signInLink,#signUpLink:hover{
+  cursor: pointer;
+}
+.outer-main {
+  /* background-image: url('./images/signInBackgroundjpg.jpg'); */
+}
+#sign-in{
+  transition: all 0.5s;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#sign-up{
+  transition: all 0.5s;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h1,h2,h3,h4{
+font-family: 'Philosopher';
+color: white;
+}
+.main-div{
+  z-index: 1;
+  backface-visibility: hidden;
+  height: 600px;
+  /* transform: translateX(-50%); */
+}
+a{
+  color: white !important;
+}
+.icon{
+  position: relative;
+  bottom: 20px;
+}
