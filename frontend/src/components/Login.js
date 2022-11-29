@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import login from '../server'
+import {login} from '../server'
 
 export const Login = () => {
     const [username,setUsername] = useState('')
