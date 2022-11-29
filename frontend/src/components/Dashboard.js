@@ -18,7 +18,7 @@ export const Dashboard = () => {
   return (
     <div className='my-5'>
         <div className='d-flex justify-content-center align-items-center video-outer'>
-            <div>
+            <div className='shadow'>
                 {src? <Video src={src}/>:"No Signal"}
             </div>
         </div>
