@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import login from '../server'
 
 export const Login = () => {
     const [username,setUsername] = useState('')
@@ -10,12 +10,13 @@ export const Login = () => {
     const handleUsername=(e)=>{
         setUsername(e.target.value)
     }
-    const handleLogin = () => {
+    const handleLogin = (e) => {
+        e.preventDefault()
         const newObj = {
             username,
             password
         }
-        // login(newObj);
+        login(newObj);
     }
   return (
     <div className='outer-main' >
@@ -29,7 +30,6 @@ export const Login = () => {
                 </div>
                 <button type="submit" className="btn btn-primary w-100 mb-4">Sign In</button>
             </form>
-            <p>Create a new account? <Link to="/signup">Sign Up</Link></p>
         </div>
     </div>
   )
