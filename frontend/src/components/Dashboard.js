@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 
 function Video({src}) {
 
-    /* <iframe width="1000" height="480" src={src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
-  return (
-        <video width="1000px" height="480px" controls>
+    return (
+      <iframe width="800" height="480" src={src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        /* <video width="1000px" height="480px" controls>
             <source src={src}></source>
-        </video>
+        </video> */
   )
 }
 
@@ -17,18 +17,18 @@ export const Dashboard = () => {
     }
   return (
     <div className='my-5'>
-        <div className='d-flex justify-content-center align-items-center video-outer'>
-            <div className='shadow'>
-                {src? <Video src={src}/>:"No Signal"}
-            </div>
+        <div className='d-flex justify-content-center align-items-center video-outer text-light bg-info bg-opacity-10'>
+                {src? <Video src={"http://192.168.0.142:8080/browserfs.html"}/>:"No Signal"}
         </div>
         <div className='d-flex flex-row justify-content-center mx-5'>
             <table className='mx-auto'>
                 <tr>
-                    <td className='p-5'><button className='btn btn-lg btn-info'>Upload Image</button></td>
-                    <td className='p-5'><button className='btn btn-lg btn-info' onClick={showVideo}>
-                        {src? "Stop":"Start"}
-                    </button></td>
+                    <td className='p-5'><button className='btn btn-lg btn-info buttons-style'>Upload Image</button></td>
+                    <td className='p-5'>
+                        <button className='btn btn-lg btn-info buttons-style' onClick={showVideo}>
+                            {src? "Stop":"Start"}
+                        </button>
+                    </td>
                 </tr>
             </table>
         </div>
