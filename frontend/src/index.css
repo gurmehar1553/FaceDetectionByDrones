@@ -1,9 +1,11 @@
+.outer-main{
+  background-image: url('./images/signInBackgroundjpg.jpg');
+  background-size: cover;
+  height: 100vh;
+}
 
 #signInLink,#signUpLink:hover{
   cursor: pointer;
-}
-.outer-main {
-  /* background-image: url('./images/signInBackgroundjpg.jpg'); */
 }
 #sign-in{
   transition: all 0.5s;
@@ -27,7 +29,6 @@ color: white;
 .main-div{
   z-index: 1;
   backface-visibility: hidden;
-  height: 600px;
   /* transform: translateX(-50%); */
 }
 a{
@@ -36,4 +37,11 @@ a{
 .icon{
   position: relative;
   bottom: 20px;
+}
+
+.dash-main{
+  background-image: url('./images/signInBackgroundjpg.jpg');
+}
+.video-outer{
+  height: 480px;
 }
