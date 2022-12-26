@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+<<<<<<< HEAD
 import {useNavigate} from 'react-router-dom'
+=======
+>>>>>>> refs/rewritten/master
 import {login} from '../server'
 
 export const Login = () => {

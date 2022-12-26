@@ -8,7 +8,11 @@ const login=async (newObj)=>{
 }
 
 const checkStatus = async ()=>{
+<<<<<<< HEAD
     const res = await axios.get(URL+'detected_status')
+=======
+    const res = await axios.get('/detected_status')
+>>>>>>> refs/rewritten/master
     return res;
 }
 export {login,checkStatus}
