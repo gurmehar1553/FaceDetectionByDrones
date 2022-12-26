@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { checkStatus } from '../server'
 
 function Video({src}) {
 
@@ -12,6 +13,16 @@ function Video({src}) {
 
 export const Dashboard = () => {
     const [src,setSrc] = useState(false)
+    useEffect(() => {
+      const key = setInterval(async function(){
+        const status = await checkStatus();
+        if(status){
+            alert("Target found")
+            clearInterval(key)
+        }
+      },1000)
+    }, [])
+    
     const showVideo=()=>{
         setSrc(!src)
     }

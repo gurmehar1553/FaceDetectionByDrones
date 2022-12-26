@@ -7,4 +7,8 @@ const login=async (newObj)=>{
     return res;
 }
 
-export default login
+const checkStatus = async ()=>{
+    const res = await axios.get('/detected_status')
+    return res;
+}
+export {login,checkStatus}
