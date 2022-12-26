@@ -17,16 +17,22 @@ export const Dashboard = () => {
       const key = setInterval(async function(){
         const status = await checkStatus();
 <<<<<<< HEAD
+<<<<<<< HEAD
         // if(status){
         //     alert("Target found")
         //     clearInterval(key)
         // }
 =======
+=======
+>>>>>>> aa7ae42a1d50edd698bf3dcb78c5d7a21d8db342
         if(status){
             alert("Target found")
             clearInterval(key)
         }
+<<<<<<< HEAD
 >>>>>>> refs/rewritten/master
+=======
+>>>>>>> aa7ae42a1d50edd698bf3dcb78c5d7a21d8db342
       },1000)
     }, [])
     
