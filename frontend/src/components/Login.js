@@ -1,22 +1,27 @@
 import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 import {login} from '../server'
 
 export const Login = () => {
     const [username,setUsername] = useState('')
     const [password,setPwd] = useState('')
+    
+    const navigate = useNavigate()
+
     const handlePwd = (e) => {
         setPwd(e.target.value)
     }
     const handleUsername=(e)=>{
         setUsername(e.target.value)
     }
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault()
         const newObj = {
             username,
             password
         }
-        login(newObj);
+        const res = await login(newObj);
+        res && navigate('/Dashboard')
     }
   return (
     <div className='outer-main' >
