@@ -16,10 +16,10 @@ export const Dashboard = () => {
     useEffect(() => {
       const key = setInterval(async function(){
         const status = await checkStatus();
-        // if(status){
-        //     alert("Target found")
-        //     clearInterval(key)
-        // }
+        if(status){
+            alert("Target found")
+            clearInterval(key)
+        }
       },1000)
     }, [])
     
