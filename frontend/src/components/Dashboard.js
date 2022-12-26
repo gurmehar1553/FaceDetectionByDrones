@@ -16,10 +16,10 @@ export const Dashboard = () => {
     useEffect(() => {
       const key = setInterval(async function(){
         const status = await checkStatus();
-        if(status){
-            alert("Target found")
-            clearInterval(key)
-        }
+        // if(status){
+        //     alert("Target found")
+        //     clearInterval(key)
+        // }
       },1000)
     }, [])
     
@@ -29,7 +29,7 @@ export const Dashboard = () => {
   return (
     <div className='my-5'>
         <div className='d-flex justify-content-center align-items-center video-outer text-light bg-info bg-opacity-10'>
-                {src? <Video src={"http://192.168.0.142:8080/browserfs.html"}/>:"No Signal"}
+                {src? <Video src={"http://192.168.0.101:8080/browserfs.html"}/>:"No Signal"}
         </div>
         <div className='d-flex flex-row justify-content-center mx-5'>
             <table className='mx-auto'>
